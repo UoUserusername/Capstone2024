@@ -1,6 +1,3 @@
-
-# 7. detectFallen과 locationBodyCenter에서 하나의 카메라 객체를 사용하는 데에서 문제 -> lock 걸어서 한 번에 하나의 스레드만 카메라에 접근할 수 있도록 제어
-
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module='google.protobuf')
 
