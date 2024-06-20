@@ -249,28 +249,3 @@ if __name__ == "__main__":
     #                                 else:
     #                                     serial.write('B'.encode('utf-8'))
     #                                     print('B')
-
-
-
-    # # 앱으로 실시간 비디오 프레임 전송
-    # def sendFrame(self, conn):
-    #     try:
-    #         while True:
-    #             with self.lock:
-    #                 frame = self.current_frame
-    #             if frame is None:
-    #                 continue
-    #
-    #             # 여기서부터 프레임 처리 및 전송 작업을 수행합니다.
-    #             # 프레임을 바이트로 인코딩
-    #             frame_data = pickle.dumps(frame)
-    #             # 바이트 데이터의 길이를 패킹
-    #             message_size = struct.pack("L", len(frame_data))
-    #             # 이미지 데이터 전송
-    #             conn.sendall(message_size + frame_data)
-    #     except Exception as e:
-    #         print("Exception in sendFrame:", e)
-    #     finally:
-    #         # main 함수가 종료될 때 카메라 캡처 객체와 소켓 연결을 해제
-    #         self.cap.release()
-    #         conn.close()
